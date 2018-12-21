@@ -3,7 +3,9 @@ RSpec.describe SantaClaus do
     expect(SantaClaus::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "santa sings" do
+    expected = ["Ho", "Ho", "Ho"]
+
+    expect(expected).to eq(SantaClaus::Song.sing(3))
   end
 end
